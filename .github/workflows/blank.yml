@@ -15,8 +15,8 @@ on:
         required: true
 
 env:
-  $file1: files/main.py
-  $file2: files/main.py
+  $file1: files/main1.py
+  $file2: files/main2.py
 
   $input1: ${{github.event.inputs.input1}}
 
