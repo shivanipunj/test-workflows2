@@ -33,8 +33,7 @@ jobs:
         run: python $file1
 
   job2:
-    runs-on: window-latest
-
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
