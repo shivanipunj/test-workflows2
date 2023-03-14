@@ -15,8 +15,6 @@ on:
         required: true
 
 env:
-  $file1: files/main1.py
-  $file2: files/main2.py
 
   $int: ${{github.event.inputs.input1}}
 
@@ -30,7 +28,9 @@ jobs:
       - uses: actions/setup-python@v2
 
       - name: Run first script
-        run: python $file1
+        run: |
+          cd files
+          python main1.py
 
   job2:
     runs-on: windows-latest
@@ -39,4 +39,6 @@ jobs:
       - uses: actions/setup-python@v2
       
       - name: Run second script
-        run:  python $file2 $int
+        run:  |
+          cd files
+          python main2.py $int
