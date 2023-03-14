@@ -1,4 +1,4 @@
 import os
-num = os.environ["input1"]
+num = os.environ["int"]
 
 print(num)
